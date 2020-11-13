@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-webkit-font-smoothing: antialiased;
+			-moz-font-smoothing: antialiased;
+			-o-font-smoothing: antialiased;
+			font-smoothing: antialiased;
+			text-rendering: optimizeLegibility;
+			font-family: 'Josefin Sans', sans-serif;
+		}
+		body{
+			font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+			font-weight: 100;
+			font-size: 12px;
+			line-height: 30px;
+			color: #777;
+			background: #4CAFF0;
+		}
+		.container{
+			position: relative;
+			width: 500px;
+			height: auto;
+			background: #fff;
+			margin-top: 10%;
+		}
+		.container form{
+			padding: 12px;
+		}
+		.container form h3{
+			font-size: 35px;
+			padding: 4px 12px 0px 0px;
+			border-bottom: 1px solid lightgrey;
+		}
+		.container form h4{
+			position: relative;
+			padding: 5px 0px 10px 0px;
+		}
+		.container form textarea{
+			width: 100%;
+			font-size: 18px;
+			padding: 10px;
+			color: blue;
+		}
+		.container form button{
+			font-size: 16px;
+			width: 100%;
+			color: #fff;
+			background: #444;
+			padding: 4px;
+			border: none;	
+		}
+		.container form button:hover{ background-color: #333; }
+		.container form p{
+			text-align: center;
+			font-size: 13px;
+			padding: 5% 5% 0% 5%;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form id="contact" action="" method="post">
+			<h3>Palindrome Checker</h3>
+			<h4>
+				<script type="text/javascript">
+					function checkPalindrome() {
+                        //take input
+                        var string1 = document.getElementById('palin').value;
+                        const string = string1;
+
+                        // convert string to an array
+                        const arrayValues = string.split('');
+
+                        // reverse the array values
+                        const reverseArrayValues = arrayValues.reverse();
+
+                        // convert array to string
+                        const reverseString = reverseArrayValues.join('');
+
+                        if(string == reverseString) {
+                            alert("It is a palindrome");
+                        }
+                        else {
+                            alert("It is not a palindrome");
+                        }
+                    }
+				</script>
+			</h4>
+
+			<fieldset>
+				<textarea placeholder="Type your word..." name="palin" id="palin" rows="3" required></textarea>
+			</fieldset>
+			<fieldset>
+				<button name="submit" type="submit" id="contact-submit" onclick="checkPalindrome()">Submit</button>
+			</fieldset>
+			<p class="copyright"><a href="palindrome.html" target="_blank" title="Colorlib">What is palindrome numeber ?</a><br>
+			Designed by <a href="AboutUs.html" target="_blank" title="Colorlib">RightRoyalBhai</a></p>
+		</form>
+	</div>	
+</body>
+</html>
